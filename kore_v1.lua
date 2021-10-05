@@ -1,4 +1,4 @@
---dumb fuck do you think i will put the source in here
+--haha no more skidding
 for l,e in pairs({(function(e,...)
         _02d548e7b6a4e1bc="This file was obfuscated using PSU Obfuscator 4.5.A | https://www.psu.dev/ & discord.gg/psu";
         local S=_02d548e7b6a4e1bc local c=e[(119679606)];
