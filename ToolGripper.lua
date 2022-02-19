@@ -39,7 +39,7 @@ function netless()
         end
     end
 end
-netless()
+--netless()
 function Grip(x,y,z,xx,yy,zz)
     for i,v in pairs(backpack:GetChildren()) do
         if v:IsA("Tool") then
@@ -57,8 +57,8 @@ function Grip(x,y,z,xx,yy,zz)
             char['Animate']['toolnone']['ToolNoneAnim']['AnimationId'] = 0
             local part = v:FindFirstChildOfClass("Part")
             align(part,x,y,z,xx,yy,zz)
-			wait(0.2)
-			v.Parent = backpack
+	    wait(0.2)
+	    v.Parent = backpack
         end
     end
 end
