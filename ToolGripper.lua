@@ -1,6 +1,7 @@
 local char = game.Players.LocalPlayer.Character
 local root = game.Players.LocalPlayer.Character.HumanoidRootPart
 local backpack = game.Players.LocalPlayer.Backpack
+local lp = game.Players.LocalPlayer
 function align(part, x, y, z, xx, yy, zz)
     local bg = Instance.new("BodyGyro", part)
     local bp = Instance.new("BodyPosition", part)
@@ -98,3 +99,29 @@ function Grip(x, y, z, xx, yy, zz)
         end
     end
 end
+local cmd = ">grip "
+lp.Chatted:connect(
+    function(message)
+        if message:sub(1, #cmd + 9) == cmd .. "visualize" then
+            for i, v in next, backpack:GetChildren() do
+                if v:IsA("Tool") then
+                    v.Parent = char
+                end
+            end
+            for i, v in next, char["Right Arm"]:GetDescendants() do
+                v:Destroy()
+            end
+        end
+        if message:sub(1, #cmd + 6) == cmd .. "demesh" then
+            for i, v in pairs(backpack:GetChildren()) do
+                if v:IsA("Tool") then
+                    for i, x in pairs(v:GetDescendants()) do
+                        if x:IsA("DataModelMesh") or x:IsA("Mesh") or x:IsA("SpecialMesh") then
+                            x:Destroy()
+                        end
+                    end
+                end
+            end
+        end
+    end
+)
