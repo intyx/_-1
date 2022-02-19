@@ -112,6 +112,10 @@ lp.Chatted:connect(
                 v:Destroy()
             end
         end
+    end
+)
+lp.Chatted:Connect(
+    function(message)
         if message:sub(1, #cmd + 6) == cmd .. "demesh" then
             for i, v in pairs(backpack:GetChildren()) do
                 if v:IsA("Tool") then
@@ -125,3 +129,12 @@ lp.Chatted:connect(
         end
     end
 )
+print([[
+  _____         _    ___     _                    
+ |_   _|__  ___| |  / __|_ _(_)_ __ _ __  ___ _ _ 
+   | |/ _ \/ _ \ | | (_ | '_| | '_ \ '_ \/ -_) '_|
+   |_|\___/\___/_|  \___|_| |_| .__/ .__/\___|_|  
+                              |_|  |_|            
+    >grip visualize: visualizes your tools that was visualized with tool gripper
+    >grip demesh: demeshes your tools
+]])
