@@ -15,7 +15,7 @@ function align(part, x, y, z, xx, yy, zz)
     end
 end
 
-function netless()
+function netless(UseOld)
     if UseOld == true then
         for i, v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
             if v:IsA("BasePart") and v.Name ~= "HumanoidRootPart" then
