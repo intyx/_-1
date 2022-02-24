@@ -136,5 +136,5 @@ print([[
    |_|\___/\___/_|  \___|_| |_| .__/ .__/\___|_|  
                               |_|  |_|            
     >grip visualize: visualizes your tools that was visualized with tool gripper
-    >grip demesh: demeshes your tools
+    >grip demesh: demeshes your tools (doenst work xd)
 ]])
