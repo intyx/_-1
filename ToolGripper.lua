@@ -14,8 +14,8 @@ function align(part, x, y, z, xx, yy, zz)
         bg.CFrame = CFrame.Angles(xx, yy, zz)
         game:GetService("RunService").RenderStepped:Wait()
     end
-    print("Ran {"..x..","..y..","..z.."} {"..xx..","..yy..","..zz.."}")
-    continue;
+    --print("Ran {"..x..","..y..","..z.."} {"..xx..","..yy..","..zz.."}")
+    --continue;
 end
 
 function netless(UseOld)
