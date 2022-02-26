@@ -14,6 +14,7 @@ function align(part, x, y, z, xx, yy, zz)
         bg.CFrame = CFrame.Angles(xx, yy, zz) -- math.rad(90)
         game:GetService("RunService").RenderStepped:Wait()
     end
+    continue;
 end
 
 function netless(UseOld)
