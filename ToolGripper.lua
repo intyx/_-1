@@ -11,9 +11,10 @@ function align(part, x, y, z, xx, yy, zz)
     bp.D = 550
     while true do
         bp.Position = root.Position + Vector3.new(x, y, z)
-        bg.CFrame = CFrame.Angles(xx, yy, zz) -- math.rad(90)
+        bg.CFrame = CFrame.Angles(xx, yy, zz)
         game:GetService("RunService").RenderStepped:Wait()
     end
+    print("Ran {"..x..","..y..","..z.."} {"..xx..","..yy..","..zz.."}")
     continue;
 end
 
