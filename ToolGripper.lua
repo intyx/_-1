@@ -87,15 +87,14 @@ function Grip(x, y, z, xx, yy, zz)
                     x:FindFirstChildOfClass("BodyGyro"):Destroy()
                 end
             end
-            wait(0.3)
-            for i, v in next, char["Right Arm"]:GetDescendants() do
-                v:Destroy()
+            --wait(0.3)
+            for i, x in next, char["Right Arm"]:GetDescendants() do
+                x:Destroy()
             end
             char["Animate"]["toolnone"]["ToolNoneAnim"]["AnimationId"] = 0
             local part = v:FindFirstChildOfClass("Part")
-            align(part, x, y, z, xx, yy, zz)
-            wait(0.2)
             v.Parent = backpack
+            align(part, x, y, z, xx, yy, zz)
         end
     end
 end
@@ -137,4 +136,5 @@ print([[
                               |_|  |_|            
     >grip visualize: visualizes your tools that was visualized with tool gripper
     >grip demesh: demeshes your tools (doenst work xd)
+    ok bye ily
 ]])
