@@ -95,7 +95,6 @@ function Grip(x, y, z, xx, yy, zz)
             end
             char["Animate"]["toolnone"]["ToolNoneAnim"]["AnimationId"] = 0
             local part = v:FindFirstChildOfClass("Part")
-            v.Parent = backpack
             align(part, x, y, z, xx, yy, zz)
         end
     end
