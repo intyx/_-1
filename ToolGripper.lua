@@ -9,11 +9,14 @@ function align(part, x, y, z, xx, yy, zz)
     bp.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
     bg.D = 100
     bp.D = 550
-    while true do
-        bp.Position = root.Position + Vector3.new(x, y, z)
-        bg.CFrame = CFrame.Angles(xx, yy, zz)
-        game:GetService("RunService").RenderStepped:Wait()
+    local function bruh()
+        while true do
+            bp.Position = root.Position + Vector3.new(x, y, z)
+            bg.CFrame = CFrame.Angles(xx, yy, zz)
+            game:GetService("RunService").RenderStepped:Wait()
+        end
     end
+    corountine.wrap(bruh)()
     --print("Ran {"..x..","..y..","..z.."} {"..xx..","..yy..","..zz.."}")
     --continue;
 end
